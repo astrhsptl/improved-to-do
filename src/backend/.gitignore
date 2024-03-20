@@ -1,0 +1,12 @@
+**/.env
+**/.idea
+**/venv
+**/media
+**/env
+**/evn
+**/db.sqlite3
+**/__pycache__
+.env
+__pycache__/
+*.pyc
+*ruff*
