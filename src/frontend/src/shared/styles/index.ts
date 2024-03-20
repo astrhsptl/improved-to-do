@@ -1,3 +1,4 @@
-import BaseStyle from "./base.module.scss";
+import AuthStyles from './auth.module.scss';
+import BaseStyle from './base.module.scss';
 
-export { BaseStyle };
+export { AuthStyles, BaseStyle };
