@@ -1,9 +1,14 @@
 import { FC } from 'react';
+import { useLang } from '..';
 
 interface TextProps {
   children: string;
 }
 
 export const Text: FC<TextProps> = ({ children }) => {
-  return <>{str}</>;
+  const dict = useLang();
+  console.log('lang');
+  console.log(dict);
+
+  return <>{children}</>;
 };
