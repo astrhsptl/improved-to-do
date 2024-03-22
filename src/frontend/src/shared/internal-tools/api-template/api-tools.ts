@@ -2,7 +2,7 @@ import { QueryParam } from '@/shared';
 
 export const compileUrlPath = (
   url: string,
-  queryParams?: QueryParam
+  queryParams?: QueryParam,
 ): string => {
   if (!queryParams) return url;
 
@@ -10,7 +10,7 @@ export const compileUrlPath = (
     url += '?';
   }
 
-  for (let [qn, qv] of Object.entries(queryParams)) url += `${qn}=${qv}`;
+  for (const [qn, qv] of Object.entries(queryParams)) url += `${qn}=${qv}`;
 
   return url;
 };

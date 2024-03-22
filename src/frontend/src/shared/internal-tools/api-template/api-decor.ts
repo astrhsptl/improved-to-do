@@ -12,13 +12,13 @@ export class APIFactory {
 
   getRequests<FetchType, FetchTypeRequest>() {
     const { fetchAll, fetchByID, create, update, remove } = new APITemplate(
-      this.url
+      this.url,
     );
 
     return {
       fetchAll: async (
         queryParams?: QueryParam,
-        RequestConfig?: AxiosRequestConfig
+        RequestConfig?: AxiosRequestConfig,
       ) => fetchAll<FetchType>(queryParams, RequestConfig),
 
       fetchById: async (id: EntityId, RequestConfig?: AxiosRequestConfig) =>
@@ -26,13 +26,13 @@ export class APIFactory {
 
       create: async (
         data: FetchTypeRequest,
-        RequestConfig?: AxiosRequestConfig
+        RequestConfig?: AxiosRequestConfig,
       ) => create<FetchType, FetchTypeRequest>(data, RequestConfig),
 
       update: async (
         id: EntityId,
         data: FetchTypeRequest,
-        RequestConfig?: AxiosRequestConfig
+        RequestConfig?: AxiosRequestConfig,
       ) => update<FetchType, FetchTypeRequest>(id, data, RequestConfig),
 
       remove: async (id: EntityId, RequestConfig?: AxiosRequestConfig) =>

@@ -12,20 +12,20 @@ export class APITemplate {
 
   async fetchAll<FetchType>(
     queryParams?: QueryParam,
-    RequestConfig?: AxiosRequestConfig
+    RequestConfig?: AxiosRequestConfig,
   ) {
-    let url = compileUrlPath(this.url, queryParams);
+    const url = compileUrlPath(this.url, queryParams);
     return await axios.get<FetchType>(url, RequestConfig);
   }
 
   async fetchByID<FetchType>(id: EntityId, RequestConfig?: AxiosRequestConfig) {
-    let url = `${this.url}${id}`;
+    const url = `${this.url}${id}`;
     return await axios.get<FetchType>(url, RequestConfig);
   }
 
   async create<FetchType, FetchTypeRequest>(
     data: FetchTypeRequest,
-    RequestConfig?: AxiosRequestConfig
+    RequestConfig?: AxiosRequestConfig,
   ) {
     return await axios.post<FetchType>(this.url, data, RequestConfig);
   }
@@ -33,14 +33,14 @@ export class APITemplate {
   async update<FetchType, FetchTypeRequest>(
     id: EntityId,
     data: FetchTypeRequest,
-    RequestConfig?: AxiosRequestConfig
+    RequestConfig?: AxiosRequestConfig,
   ) {
-    let url = `${this.url}${id}`;
+    const url = `${this.url}${id}`;
     return await axios.patch<FetchType>(url, data, RequestConfig);
   }
 
   async remove<FetchType>(id: EntityId, RequestConfig?: AxiosRequestConfig) {
-    let url = `${this.url}${id}`;
+    const url = `${this.url}${id}`;
     return await axios.delete<FetchType>(url, RequestConfig);
   }
 }
