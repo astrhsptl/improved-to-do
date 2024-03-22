@@ -8,27 +8,30 @@ export type LangDict = typeof en;
 export type langs = keyof typeof dicts;
 
 class LangStore {
-  private langs;
+  private dicts;
   private current: langs;
 
   constructor() {
-    this.langs = dicts;
-    this.current = 'ru';
+    this.dicts = dicts;
+    this.current = (localStorage.getItem('lang') as langs | null) ?? 'ru';
     makeAutoObservable(this);
   }
 
   public get dict(): LangDict {
-    console.log('dict getter');
-
-    return this.langs[this.current];
+    return this.dicts[this.current];
   }
 
   public set lang(nLang: langs) {
+    localStorage.setItem('lang', nLang);
     this.current = nLang;
   }
 
-  public get cLang() {
+  public get lang() {
     return this.current;
+  }
+
+  public get langLabels() {
+    return Object.keys(this.dicts);
   }
 }
 

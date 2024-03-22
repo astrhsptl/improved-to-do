@@ -13,7 +13,8 @@ class CredentialStorage implements CredentialStorageInterface {
     let updatedCookie =
       encodeURIComponent(key) + '=' + encodeURIComponent(value);
 
-    for (let [optionKey, optionValue] of Object.entries(options)) {
+    for (const [oKey, optionValue] of Object.entries(options)) {
+      let optionKey = oKey;
       if (optionKey === 'maxAge') {
         optionKey = 'max-age';
       }
@@ -29,7 +30,7 @@ class CredentialStorage implements CredentialStorageInterface {
   }
 
   getCredential(key: string): string | null | undefined {
-    let matches = document.cookie.match(
+    const matches = document.cookie.match(
       new RegExp(
         '(?:^|; )' +
           key.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') +
