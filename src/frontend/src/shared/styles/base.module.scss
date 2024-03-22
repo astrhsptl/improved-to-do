@@ -1,5 +1,6 @@
-/* base colors */ 
+/* base colors */
 $main-color: #fff;
+$darkColor: #000;
 
 /* z-indexes */
 $base-index: 1;
@@ -29,12 +30,19 @@ $alert-index: 5;
   align-items: center;
 }
 
+
+@mixin coverBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 @mixin font(
   $size,
   $weight: 400,
   $line-height: 1.1em,
-  $color: $darkBlue,
-  $family: 'Inter'
+  $color: $darkColor,
+  $family: 'Victor Mono'
 ) {
   color: $color;
   font-size: $size;
@@ -43,8 +51,13 @@ $alert-index: 5;
   font-family: $family;
 }
 
-@mixin coverBackground {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+
+@mixin baseButton(
+  $height: 32px,
+  $width: 100%,
+) {
+  height: $height;
+  width: $width;
+  border: none;
+  border-radius: 10px;
 }

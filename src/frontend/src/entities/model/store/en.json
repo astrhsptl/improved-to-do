@@ -1,4 +1,8 @@
 {
-  "login": "login",
-  "logout": "logout"
+  "login": "Login",
+  "logout": "Logout",
+  "remember-me": "Remember me",
+  "email": "Email",
+  "password": "Password",
+  "or_reg": "or registration"
 }
