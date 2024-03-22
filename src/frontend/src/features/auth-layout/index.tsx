@@ -1,6 +1,7 @@
 'use client';
 
 import { Text } from '@/shared';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 interface AuthInput {
@@ -14,12 +15,27 @@ export const AuthFormLayout = () => {
     console.log(data);
   };
 
+  const [first, setfirst] = useState('en');
+
   return (
     <form onSubmit={() => handleSubmit(onSubmit)}>
       <input {...(register('email'), { required: true })} />
       <input {...register('password', { required: true })} />
       <button type='submit'>
-        <Text>login</Text>
+        <Text lang={first}>login</Text>
+      </button>
+
+      <button
+        type='button'
+        onClick={() => {
+          if (first === 'ru') {
+            setfirst('en');
+            return;
+          }
+          setfirst('ru');
+        }}
+      >
+        change
       </button>
     </form>
   );

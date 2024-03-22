@@ -1,14 +1,11 @@
 import { FC } from 'react';
-import { useLang } from '..';
+import { useTranslate } from './use-translate';
 
 interface TextProps {
   children: string;
+  lang?: string;
 }
 
-export const Text: FC<TextProps> = ({ children }) => {
-  const dict = useLang();
-  console.log('lang');
-  console.log(dict);
-
-  return <>{children}</>;
+export const Text: FC<TextProps> = ({ children, lang }) => {
+  return <>{useTranslate(children, lang)}</>;
 };
