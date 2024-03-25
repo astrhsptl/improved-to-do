@@ -8,10 +8,10 @@ interface TextProps {
 }
 
 export const Text: FC<TextProps> = observer(({ children }) => {
-  return <>{tranlate(children) ?? children}</>;
+  return <>{translate(children) ?? children}</>;
 });
 
-export const tranlate = (text: string) => {
+export const translate = (text: string) => {
   return LS.dict[text.toLowerCase()];
 };
 

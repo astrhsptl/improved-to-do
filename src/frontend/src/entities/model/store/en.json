@@ -4,5 +4,6 @@
   "remember-me": "Remember me",
   "email": "Email",
   "password": "Password",
-  "or_reg": "or registration"
+  "or": "or",
+  "reg": "registration"
 }
