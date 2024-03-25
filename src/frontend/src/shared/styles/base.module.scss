@@ -51,7 +51,6 @@ $alert-index: 5;
   font-family: $family;
 }
 
-
 @mixin baseButton(
   $height: 32px,
   $width: 100%,
@@ -60,4 +59,45 @@ $alert-index: 5;
   width: $width;
   border: none;
   border-radius: 10px;
+}
+
+.baseInputComponent {
+  @include flexCenter();
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--dark);
+  margin-bottom: 14px;
+}
+
+.baseInputComponent > input {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+}
+
+.baseInputComponent > img {
+  user-select: none;
+}
+
+.baseInputComponent > input::placeholder {
+  font-size: 18px;
+  color: var(--dark);
+}
+
+.baseInputComponent > input:focus {
+  outline: none;
+  border: none;
+}
+
+.baseButton {
+  @include baseButton(48px);
+  @include font(1rem);
+  background-color: var(--dark);
+  color: var(--light);
 }

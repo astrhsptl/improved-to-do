@@ -4,6 +4,13 @@
   "remember-me": "Remember me",
   "email": "Email",
   "password": "Password",
-  "or": "or",
-  "reg": "registration"
+  "or": "Or",
+  "reg": "Registration",
+  "first_name": "First name",
+  "last_name": "Last name",
+  "phone": "Phone",
+  "personal": "Personal",
+  "credential": "Credential",
+  "field required": "Field are required",
+  "incorrect format": "Incorrect format"
 }

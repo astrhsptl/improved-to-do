@@ -7,12 +7,12 @@
 }
 
 .loginForm {
-  @include flexCenterColumn();
   @include font(1rem);
+  display: grid;
+  justify-items: center;
   max-width: 400px;
   width: 100%;
   margin: auto;
-  gap: 20px;
 }
 
 .loginLay {
@@ -23,45 +23,15 @@
 
 .loginTitle {
   @include font(1.7rem, 700);
-
 }
 
-.loginInputComponent {
-  @include flexCenter();
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid var(--dark);
+.loginSubTitle {
+  margin-bottom: 20px;
 }
 
-.loginInputComponent > input {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  width: 100%;
-  outline: none;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 18px;
-}
-
-.loginInputComponent > img {
-  user-select: none;
-}
-
-.loginInputComponent > input::placeholder {
-  font-size: 18px;
-  color: var(--dark);
-}
-
-.loginInputComponent > input:focus {
-  outline: none;
-  border: none;
-}
-
-.btn {
-  @include baseButton(48px);
-  @include font(1rem);
-  background-color: var(--dark);
-  color: var(--light);
+.authInputError {
+  color: red;
+  font-size: 0.7rem;
+  justify-self: start;
+  margin-left: 20px;
 }
