@@ -78,7 +78,7 @@ $alert-index: 5;
   outline: none;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .baseInputComponent > img {
@@ -86,7 +86,7 @@ $alert-index: 5;
 }
 
 .baseInputComponent > input::placeholder {
-  font-size: 18px;
+  font-size: 1rem;
   color: var(--dark);
 }
 
@@ -100,4 +100,24 @@ $alert-index: 5;
   @include font(1rem);
   background-color: var(--dark);
   color: var(--light);
+}
+
+
+@media (max-width: 770px) {
+  .baseButton {
+    @include baseButton(40px);
+    font-size: 0.90rem;
+  }
+
+  .baseInputComponent {
+    padding: 6px;
+  }
+
+  .baseInputComponent > input {
+    font-size: 0.90rem;
+  }
+
+  .baseInputComponent > input::placeholder {
+    font-size: 0.90rem;
+  }
 }

@@ -1,0 +1,48 @@
+@import "../consts.module.scss";
+@import "../base.module.scss";
+
+.nav {
+  height: 100dvh;
+  width: 250px;
+  border-right: $borderline-conf;
+}
+
+.navLogoContainer {
+  @include flexCenter();
+  @include font(1.3rem);
+
+  font-weight: 700;
+
+  gap: 10px;
+
+  width: 100%;
+  height: 80px;
+  border-bottom: $borderline-conf;
+
+}
+
+.navLogoContainer > img {
+  height: 40px;
+  width: 40px;
+}
+
+.navLinkContainer {
+  @include flexColumn();
+  align-items: start;
+  padding-left: 30px;
+
+  padding-top: 44px;
+
+  width: 100%;
+  height: auto;
+}
+
+.navLink {
+  @include flexCenter();
+  gap: 10px;
+
+  @include font(1.15rem);
+  text-decoration: none;
+
+  margin-bottom: 15px;
+}

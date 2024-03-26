@@ -1,6 +1,9 @@
 :root {
   --dark: #000;
   --light: #fff;
+  --calendar-line-color: rgba(0, 0, 0, 0.5);
+
+  --moible-width: 770px;
 }
 
 *,

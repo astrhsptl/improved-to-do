@@ -1,0 +1,11 @@
+.headLayout {
+  background: red;
+  width: 100%;
+  height: 80px;
+}
+
+.someLayout {
+  background: green;
+  width: 100%;
+  height: calc(100% - 80px);
+}

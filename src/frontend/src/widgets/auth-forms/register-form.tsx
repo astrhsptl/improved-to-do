@@ -27,6 +27,7 @@ export const RegisterForm = () => {
   return (
     <FormBaseLayout methods={methods} onSub={onSub}>
       <FormHead head={'reg'} description={'login'} link={'/login'} />
+
       <h2 className={AuthBaseStyles.loginSubTitle}>
         <Text up>Personal</Text>
       </h2>
@@ -51,6 +52,7 @@ export const RegisterForm = () => {
       />
       <EmailInput />
       <PasswordInput />
+
       <SubmitInput text={'login'} />
     </FormBaseLayout>
   );
