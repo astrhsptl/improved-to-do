@@ -1,5 +1,9 @@
+@import '../base.module.scss';
+
 .headLayout {
-  background: red;
+  @include flex();
+  justify-content: space-between;
+  padding: 0 100px;
   width: 100%;
   height: 80px;
 }
@@ -8,4 +12,22 @@
   background: green;
   width: 100%;
   height: calc(100% - 80px);
+}
+
+.swiper {
+  @include flexCenter();
+  gap: 26px;
+
+  @include font(1rem);
+
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  padding: 0 26px;
+  height: 54px;
+}
+
+.swiperItem.active {
+  background-color: var(--light);
+  padding: 8px 20px;
+  border-radius: 10px;
 }
