@@ -61,6 +61,15 @@ $alert-index: 5;
   border-radius: 10px;
 }
 
+@mixin userSelect(
+  $type
+) {
+  user-select: $type;
+  -moz-user-select: $type;
+  -webkit-user-select: $type;
+  -ms-user-select: $type;
+}
+
 .baseInputComponent {
   @include flexCenter();
   width: 100%;

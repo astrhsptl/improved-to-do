@@ -4,24 +4,26 @@ import { useState } from 'react';
 
 export const CalendarHead = () => {
   const [active, setActive] = useState(0);
+  const some = ['Day', 'Week', 'Month', 'Year'];
 
   return (
     <section className={CalendarHeadStyles.headLayout}>
       <div className={CalendarHeadStyles.swiper}>
-        <span
-          className={clsx(
-            CalendarHeadStyles.swiperItem,
-            CalendarHeadStyles.active,
-          )}
-        >
-          Day
-        </span>
-        <span>Week</span>
-        <span>Month</span>
-        <span>Year</span>
+        {some.map((name, index) => (
+          <span
+            key={name}
+            className={clsx(
+              CalendarHeadStyles.swiperItem,
+              active === index ? CalendarHeadStyles.active : '',
+            )}
+            onClick={() => setActive(index)}
+          >
+            {name}
+          </span>
+        ))}
       </div>
 
-      <div>U</div>
+      <div className={CalendarHeadStyles.avatar}>U</div>
     </section>
   );
 };

@@ -1,7 +1,6 @@
 import { CalendarStyles } from '@/shared';
-import { Navbar } from '@/widgets';
-import { CalendarHead } from '@/widgets';
-import { CalendarHeadddd } from '@/widgets/calendar/calendar.tsx';
+import { CalendarHead, Navbar } from '@/widgets';
+import { CalendarBody } from '@/widgets/calendar/calendar.tsx';
 
 export const Calendar = () => {
   return (
@@ -9,7 +8,7 @@ export const Calendar = () => {
       <Navbar />
       <div>
         <CalendarHead />
-        <CalendarHeadddd />
+        <CalendarBody />
       </div>
     </div>
   );
